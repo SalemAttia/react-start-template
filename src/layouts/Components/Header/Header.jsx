@@ -11,7 +11,7 @@ const Header = (props) => (
       <ul className={styles.navsection}>
         <li>
           <button type="button" className={styles.headernavbutton}>
-            <img src={path} alt="nav button" />
+            <img src='' alt="nav button" />
           </button>
         </li>
         
@@ -23,7 +23,7 @@ const Header = (props) => (
         </li>
         <li>
           <button type="button" className={styles.loginButton}>
-          Login
+            Login
           </button>
         </li>
       </ul>

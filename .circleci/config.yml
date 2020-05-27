@@ -21,5 +21,4 @@ jobs:
     
        - run: npm run lint
        - run: npm run test
-       - run: npm run depcheck
        - run: npm run size

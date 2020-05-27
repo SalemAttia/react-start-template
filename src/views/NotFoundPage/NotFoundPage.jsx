@@ -7,9 +7,6 @@ const NotFoundPage = (props) => (
     <MainSection className="main-content">
       <HomeLink>
         404
-        {""}
-        <br />
-        <br />
         <Translate content="Not-found-page" />
       </HomeLink>
       

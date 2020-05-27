@@ -1,0 +1,84 @@
+{
+  "name": "eact-start-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "counterpart": "^0.18.6",
+    "eslint-config-react-app": "^5.2.1",
+    "lodash": "^4.17.14",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.0.6",
+    "react-interpolate-component": "^0.12.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "react-translate-component": "^0.15.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "eslint": "^6.8.0",
+    "eslint-config-crowdanalyzer-react": "^2.1.0",
+    "eslint-plugin-flowtype": "^5.1.1",
+    "lint-staged": "^9.5.0",
+    "node-sass-chokidar": "^1.4.0",
+    "npm-check": "^5.9.1",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.1",
+    "react-test-renderer": "^16.13.1",
+    "size-limit": "^4.0.2",
+    "typescript": "^3.9.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar assets/scss/mainStyle -o assets/ --output-style compressed",
+    "build-css-prod": "node-sass-chokidar assets/scss/mainStyle -o assets/ --output-style compressed",
+    "css-prefix": "npx postcss assets/home.css --use autoprefixer -d src/assets/ && npx postcss assets/medical-provider.css --use autoprefixer -d src/assets/ && npx postcss assets/index.css --use autoprefixer -d public/assets/css && npx postcss assets/ar-inner-style.css --use autoprefixer -d public/assets/css",
+    "watch-css": "npm run build-css && node-sass-chokidar style/ -o src/ --watch --recursive",
+    "lint": "eslint --ext .js --ext .jsx ./src",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx ./src",
+    "start": "react-scripts start",
+    "build": "npm run build-css-prod && npm run css-prefix && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "depcheck": "./node_modules/.bin/npm-check --ignore npm-check --ignore size-limit --ignore postcss --ignore lint-staged",
+    "size": "npm run build && size-limit",
+    "check": "npm run lint && npm run depcheck",
+    "size-limit": "size-limit"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "size-limit": [
+    {
+      "path": "build/static/**/*.{js,css,svg,woff,woff2,png,ttf,html}",
+      "limit": "700 KB"
+    }
+  ],
+  "optionalDependencies": {
+    "fsevents": "^2.1.2"
+  }
+}

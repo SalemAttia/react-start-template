@@ -1,0 +1,119 @@
+.wrapper {
+    color: var(--color);
+    background: var(--background) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 7.7rem;
+}
+
+.wrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.headercontainer {
+    max-width: 100rem;
+    padding: 2.3rem 1.45rem;
+    margin: 0 auto;
+}
+.headercontainer li {
+    display: inline;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+.navsection{
+    float: right;
+}
+
+.headernavbutton {
+    display: inline-block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background: #f9fafb00;
+    color: #f9fafb00;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+}
+.headernavbutton img {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+}
+.headernavbutton:hover,
+.headernavbutton:focus {
+    background: #8AEF07;
+}
+
+.headernavbutton:focus, .loginButton:focus {
+    outline: none;
+    outline-offset: none;
+}
+
+.headernavbutton:active {
+    transform: scale(0.99);
+}
+
+.loginButton {
+width: 83px;
+height: 29px;
+border: 2px solid #FFFFFF;
+border-radius: 51px;
+opacity: 1;
+line-height: 1;
+cursor: pointer;
+text-align: center;
+transition: background 250ms ease-in-out, transform 150ms ease;
+-webkit-appearance: none;
+-moz-appearance: none;
+background: none;
+line-height: 1.2;
+font-size: 1.6rem;
+color: #FFFFFF;
+}
+
+.select {
+    color: #FFFFFF;
+    display: inline-block !important;
+    height: 34px;
+    width: 6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: button !important;
+    background: url(/new/arrow.png) 80% / 25% no-repeat #f9fafb00;
+    border: none !important;
+    background-position: 83% 58%;
+  }
+
+  .select::-ms-expand {
+    display: none; 
+}
+
+.select > option {
+    background: var(--background) !important;
+    color: #FFFFFF;
+    border: none !important;
+ }
+
+ .select > option:hover {
+    background: var(--background) !important;
+    color: #FFFFFF;
+    border: none !important;
+ }
+ 
+
+@media screen and (min-width:0\0) {
+    .select {
+        background: none\9;
+        padding: 5px\9;
+    }
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$default-font: 'Cairo',
+sans-serif;
+// variables
+$color-white: #eee;
+$color-black: #444;
+$color-grey: #999;
+$color-brand-primary: #584383;
+$color-brand-primary-diff: $color-white;
+$color-brand-secondary: #ff991d;
+$color-brand-secondary-diff: $color-white;
+$easing: ease-out 160ms;
+$radius: 4px;
+$radius-rounded: 35px;
+$color-error: #EB5757;
+$color-info: #2F80ED;
+$color-warning: #FFA000;
+$color-success: #219653;
+// shadows
+$shadow-default: 2px 2px 5px #0002;
+$shadow-high: 3px 3px 7px #0004;
+$shadow-float: 5px 5px 10px #0004;
+@mixin shadow($shadow: $shadow-default) {
+    box-shadow: $shadow;
+}
+
+$media-screen: (min-width: 1367px);
+$media-display: (min-width:1025px) and (max-width:1366px);
+$media-tablet: (max-width:1024px);
+$media-mobile: (max-width:480px);

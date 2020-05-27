@@ -20,6 +20,7 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@size-limit/preset-app": "^4.5.0",
     "autoprefixer": "^9.8.0",
     "chai": "^4.2.0",
     "enzyme": "^3.11.0",
@@ -49,7 +50,7 @@
     "lint": "eslint --ext .js --ext .jsx ./src",
     "lint-fix": "eslint --fix --ext .js --ext .jsx ./src",
     "start": "react-scripts start",
-    "build": "npm run build-css-prod && npm run css-prefix && react-scripts build",
+    "build": "npm run build-css-prod && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "depcheck": "./node_modules/.bin/npm-check --ignore npm-check --ignore size-limit --ignore postcss --ignore lint-staged",
